@@ -1,0 +1,12 @@
+language: python
+install:
+  - sudo apt-get install ansible && (sudo apt-get install virtualenv || sudo apt-get install python-virtualenv || sudo pip2 install virtualenv)
+  - virtualenv ~/Ansible-lint
+  - source ~/Ansible-lint/bin/activate
+  - pip2 install ansible-lint==2.6.2 ansible==2.0.0.2
+script:
+  - echo "Hello Travis"
+
+notifications:
+  slack:
+    secure: KZJGtCQkrevhSFe/RknTWreK2UsYBJNgydJxY+x6qc7gt//xKAuWvBVanr8vmYqOl/0GKJ9hncncN8FjLSphhJxmQZ5orqbQdLZ0EqUBou5GO/qew1D5Y9Buo/wgAqJ9Q7qXpEqvrRbxT/t180ec2Rfii8HKuXRff5nEo1msJZasx+ZG6+p+Iw+Z/mtKK8vtOkT2n+2AStVfuVqp93ePCuWeU2LTCeS/+srKcecbdTTwh8z0dcBrClTQ26wCmgOVZJF3/dU1TcxvIXkZ/7K1MJ8FBEXmWkMHMFBSDyZBxsTZiSJGFU+LTxJFJT60XSuvBEHUXzzDgvgzqXizGM1dG+tdYmbJus/g0JAwQ7R5wDwb/Nou2z/l2T3h4myP7u4JjUoJ7r+ntxoAEd4Twnt5ppHyJKCDvV5JlslBwujO2RLkKZF2JlieBao6jgqhBNlGcnCblPrRSYmsPTdhJHjeOQIWEYxVHsyFY6QK0ZhL1AxWYXBMKhNO1rLli3a7VU5lnz0nnTu0PvoYZqDkvDz8NB/Pzqxdn6eqOt9OFAIzXngRrOrkZZY+z4vYEkirnu3t1Bs/ncOWv797iykv9Uiexe+1dNFD+KruPDCZvIL06cFltkrOo2d+I3FO2ZrVFHzmmw/9OqALfu1d6f8j94otf592mfF4Td02cSNRmUYA+4Y=
